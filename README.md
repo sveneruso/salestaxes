@@ -1,4 +1,5 @@
-[![Code Climate](https://codeclimate.com/github/sveneruso/salestaxes/badges/gpa.svg)](https://codeclimate.com/github/sveneruso/salestaxes)
+[![Code Climate](https://codeclimate.com/github/sveneruso/salestaxes/badges/gpa.svg)](https://codeclimate.com/github/sveneruso/salestaxes) 
+[![Build Status](https://travis-ci.org/sveneruso/salestaxes.svg?branch=master)](https://travis-ci.org/sveneruso/salestaxes)
 
 #PROBLEM: SALES TAXES
 

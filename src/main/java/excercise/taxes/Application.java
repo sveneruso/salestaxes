@@ -3,7 +3,7 @@ package excercise.taxes;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
+/*
  * @author sveneruso
  */
 @SpringBootApplication

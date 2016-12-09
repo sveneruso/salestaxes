@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/*
  * @author sveneruso
  */
 public class Cart {
@@ -16,6 +16,11 @@ public class Cart {
     public Cart() {
     }
 
+
+    /**
+     * Add item to cart
+     * @param item
+     */
     public void addItem(CartItem item) {
         this.items.add(item);
 

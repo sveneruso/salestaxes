@@ -27,7 +27,8 @@ public class Cart {
         BigDecimal itemTotal = item.getGrossPrice().multiply(new BigDecimal(item.getQuantity()));
 
         this.cartTotal = this.cartTotal.add(itemTotal).setScale(2, BigDecimal.ROUND_HALF_UP);
-        this.cartTaxTotal = this.cartTaxTotal.add(item.getProductTax()).setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.cartTaxTotal = this.cartTaxTotal.add(item.getProductTax())
+                .setScale(2, BigDecimal.ROUND_HALF_UP);
     }
 
     public List<CartItem> getItems() {

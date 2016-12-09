@@ -16,7 +16,8 @@ public class CartItem {
     public CartItem() {
     }
 
-    public CartItem(String productCode, Integer quantity, BigDecimal productUnitPrice, BigDecimal productTax,
+    public CartItem(String productCode, Integer quantity,
+                    BigDecimal productUnitPrice, BigDecimal productTax,
                     BigDecimal grossPrice) {
         this.productCode = productCode;
         this.quantity = quantity;

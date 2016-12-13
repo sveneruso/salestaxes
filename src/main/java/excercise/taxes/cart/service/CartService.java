@@ -5,6 +5,6 @@ import excercise.taxes.cart.model.CartItem;
 
 public interface CartService {
 
-    Cart addCartItem(CartItem Item);
+    Cart addCartItem(CartItem item);
 
 }

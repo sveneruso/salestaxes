@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * @author sveneruso
- */
 public class Cart {
 
     private List<CartItem> items = new ArrayList<>();
@@ -19,7 +16,7 @@ public class Cart {
 
     /**
      * Add item to cart
-     * @param item
+     * @param item The item to add
      */
     public void addItem(CartItem item) {
         this.items.add(item);
@@ -35,6 +32,10 @@ public class Cart {
         return items;
     }
 
+    /**
+     * Add multiple items to the cart
+     * @param items The list of items
+     */
     public void setItems(List<CartItem> items) {
 
         for(CartItem newItem : items) {

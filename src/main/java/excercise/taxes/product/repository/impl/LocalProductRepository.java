@@ -36,11 +36,13 @@ public class LocalProductRepository implements ProductRepository {
         }
     };
 
-    private Map<String, Product> products = new HashMap<String, Product>() {{
-        for (Product product : productList) {
-            put(product.getCode(), product);
+    private Map<String, Product> products = new HashMap<String, Product>() {
+        {
+            for (Product product : productList) {
+                put(product.getCode(), product);
+            }
         }
-    }};
+    };
 
 
     @Override

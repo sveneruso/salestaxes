@@ -23,6 +23,10 @@ public class ProductController {
     }
 
 
+    /**
+     * Get all products.
+     * @return The list of products.
+     */
     @RequestMapping(value = "/product", method =  RequestMethod.GET)
     public List<Product> getProducts() {
         List<Product> allProducts = new ArrayList<>();

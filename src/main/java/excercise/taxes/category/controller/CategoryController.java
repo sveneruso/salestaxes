@@ -22,6 +22,10 @@ public class CategoryController {
         return categoryRepository.getCategory(code);
     }
 
+    /**
+     * Get all categories.
+     * @return The list of category
+     */
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public List<Category> getCategory() {
         List<Category> response = new ArrayList<>();

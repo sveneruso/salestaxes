@@ -50,7 +50,7 @@ public class DefaultSalesTaxesService implements SalesTaxesService {
         return roundToFive(finalPrice);
     }
 
-    public  BigDecimal roundToFive(BigDecimal numberToRound){
+    private  BigDecimal roundToFive(BigDecimal numberToRound){
         BigDecimal baseNumber = new BigDecimal("2");
         return baseNumber.multiply(numberToRound).setScale(1, BigDecimal.ROUND_UP)
                 .divide(baseNumber);

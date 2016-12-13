@@ -2,9 +2,6 @@ package excercise.taxes.cart.model;
 
 import java.math.BigDecimal;
 
-/**
- * @author sveneruso
- */
 public class CartItem {
 
     private String productCode;

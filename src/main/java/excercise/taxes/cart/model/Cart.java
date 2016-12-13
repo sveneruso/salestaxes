@@ -15,7 +15,7 @@ public class Cart {
 
 
     /**
-     * Add item to cart
+     * Add item to cart.
      * @param item The item to add
      */
     public void addItem(CartItem item) {
@@ -33,7 +33,7 @@ public class Cart {
     }
 
     /**
-     * Add multiple items to the cart
+     * Add multiple items to the cart.
      * @param items The list of items
      */
     public void setItems(List<CartItem> items) {

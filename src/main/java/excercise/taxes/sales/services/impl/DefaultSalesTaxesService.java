@@ -52,7 +52,8 @@ public class DefaultSalesTaxesService implements SalesTaxesService {
 
     public  BigDecimal roundToFive(BigDecimal numberToRound){
         BigDecimal baseNumber = new BigDecimal("2");
-        return baseNumber.multiply(numberToRound).setScale(1, BigDecimal.ROUND_UP).divide(baseNumber);
+        return baseNumber.multiply(numberToRound).setScale(1, BigDecimal.ROUND_UP)
+                .divide(baseNumber);
     }
 
     private BigDecimal getProductTax(Product product) {
@@ -81,7 +82,8 @@ public class DefaultSalesTaxesService implements SalesTaxesService {
 
     private BigDecimal getImportedTax(Product product) {
         BigDecimal tax;
-        boolean isExcludedCategory = salesTaxesRepository.getImportedExcludedCategory().contains(product.getCategoryCode());
+        boolean isExcludedCategory = salesTaxesRepository.getImportedExcludedCategory()
+                .contains(product.getCategoryCode());
         if(isExcludedCategory) {
             tax = salesTaxesRepository.getImportedExcludedSalesTaxes();
         } else {

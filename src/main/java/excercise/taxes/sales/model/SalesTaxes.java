@@ -16,7 +16,15 @@ public class SalesTaxes {
     public SalesTaxes() {
     }
 
-    public SalesTaxes(BigDecimal baseSalesTax, BigDecimal importedSalesTax, List<String> localExcludedCategory,
+    /**
+     * Construtor.
+     * @param baseSalesTax The base sale tax
+     * @param importedSalesTax The imported sale tac
+     * @param localExcludedCategory The category's code to exclude for local category
+     * @param importedExcludedCategory The category's code to exclude for imported category
+     */
+    public SalesTaxes(BigDecimal baseSalesTax, BigDecimal importedSalesTax,
+                      List<String> localExcludedCategory,
                       List<String> importedExcludedCategory) {
         this.localSalesTax = baseSalesTax;
         this.importedSalesTax = importedSalesTax;

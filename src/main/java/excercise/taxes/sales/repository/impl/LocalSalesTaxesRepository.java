@@ -10,17 +10,19 @@ import java.util.List;
 @Component
 public class LocalSalesTaxesRepository implements SalesTaxesRepository {
 
-    private final static BigDecimal LOCAL_SALES_TAXES = new BigDecimal(10);
-    private final static BigDecimal IMPORTED_SALES_TAXES = new BigDecimal(5);
-    private final static BigDecimal LOCAL_EXCLUDED_SALES_TAXES = BigDecimal.ZERO;
-    private final static BigDecimal IMPORTED_EXCLUDED_SALES_TAXES = BigDecimal.ZERO;
+    private static final BigDecimal LOCAL_SALES_TAXES = BigDecimal.TEN;
+    private static final BigDecimal IMPORTED_SALES_TAXES = new BigDecimal(5);
+    private static final BigDecimal LOCAL_EXCLUDED_SALES_TAXES = BigDecimal.ZERO;
+    private static final BigDecimal IMPORTED_EXCLUDED_SALES_TAXES = BigDecimal.ZERO;
 
 
-    private List<String> localExcludedCategory = new ArrayList<String>() {{
-        add("c_001");
-        add("c_003");
-        add("c_005");
-    }};
+    private List<String> localExcludedCategory = new ArrayList<String>() {
+        {
+            add("c_001");
+            add("c_003");
+            add("c_005");
+        }
+    };
 
     private List<String> importedExcludedCategory = new ArrayList<>();
 

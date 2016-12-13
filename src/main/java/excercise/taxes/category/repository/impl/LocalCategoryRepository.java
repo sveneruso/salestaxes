@@ -22,11 +22,13 @@ public class LocalCategoryRepository implements CategoryRepository {
         }
     };
 
-    Map<String, Category> categories = new HashMap<String, Category>() {{
-        for (Category category : categoryList) {
-            put(category.getCode(), category);
+    Map<String, Category> categories = new HashMap<String, Category>() {
+        {
+            for (Category category : categoryList) {
+                put(category.getCode(), category);
+            }
         }
-    }};
+    };
 
     @Override
     public Category getCategory(String code) {

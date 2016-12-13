@@ -10,6 +10,13 @@ public class Product {
     public Product() {
     }
 
+    /**
+     * Constructor.
+     * @param code The code of the product
+     * @param name The name of the product
+     * @param categoryCode The code of the product's category
+     * @param imported If the product is imported or not
+     */
     public Product(String code, String name, String categoryCode, boolean imported) {
         this.code = code;
         this.name = name;

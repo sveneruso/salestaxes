@@ -14,7 +14,7 @@ public class CartItem {
     }
 
     /**
-     * Constructor with params
+     * Constructor with params.
      * @param productCode The code of the product
      * @param quantity The quantity of the product
      * @param productUnitPrice The unit price of the product

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Component
 public class DefaultSalesTaxesService implements SalesTaxesService {
@@ -43,14 +44,15 @@ public class DefaultSalesTaxesService implements SalesTaxesService {
 
     private BigDecimal calculateProductTaxes(Product product, BigDecimal price) {
         BigDecimal productTax = getProductTax(product);
-        BigDecimal finalPrice = (price.multiply(productTax)).divide(new BigDecimal(100.00));
+        BigDecimal finalPrice = (price.multiply(productTax)).divide(new BigDecimal("100.00"));
         finalPrice = finalPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 
-        return toFive(finalPrice);
+        return roundToFive(finalPrice);
     }
 
-    public  BigDecimal toFive(BigDecimal v){
-        return new BigDecimal("2").multiply(v).setScale(1, BigDecimal.ROUND_UP).divide(new BigDecimal("2"));
+    public  BigDecimal roundToFive(BigDecimal numberToRound){
+        BigDecimal baseNumber = new BigDecimal("2");
+        return baseNumber.multiply(numberToRound).setScale(1, BigDecimal.ROUND_UP).divide(baseNumber);
     }
 
     private BigDecimal getProductTax(Product product) {
@@ -66,7 +68,8 @@ public class DefaultSalesTaxesService implements SalesTaxesService {
 
     private BigDecimal getLocalTax(Product product) {
         BigDecimal tax;
-        boolean isExcludedCategory = salesTaxesRepository.getLocalExcludedCategory().contains(product.getCategoryCode());
+        List<String> localExcludedCategory = salesTaxesRepository.getLocalExcludedCategory();
+        boolean isExcludedCategory = localExcludedCategory.contains(product.getCategoryCode());
 
         if(isExcludedCategory) {
             tax = salesTaxesRepository.getLocalExcludedSalesTaxes();

@@ -13,6 +13,14 @@ public class CartItem {
     public CartItem() {
     }
 
+    /**
+     * Constructor with params
+     * @param productCode The code of the product
+     * @param quantity The quantity of the product
+     * @param productUnitPrice The unit price of the product
+     * @param productTax The taxes of the product
+     * @param grossPrice The gross price of the product
+     */
     public CartItem(String productCode, Integer quantity,
                     BigDecimal productUnitPrice, BigDecimal productTax,
                     BigDecimal grossPrice) {

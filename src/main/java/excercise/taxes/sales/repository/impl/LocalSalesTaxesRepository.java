@@ -7,9 +7,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author sveneruso
- */
 @Component
 public class LocalSalesTaxesRepository implements SalesTaxesRepository {
 

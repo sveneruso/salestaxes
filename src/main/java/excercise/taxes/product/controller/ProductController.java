@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author sveneruso
- */
 @RestController
 public class ProductController {
 

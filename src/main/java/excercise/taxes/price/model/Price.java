@@ -2,9 +2,6 @@ package excercise.taxes.price.model;
 
 import java.math.BigDecimal;
 
-/**
- * @author sveneruso
- */
 public class Price {
 
     private String productCode;

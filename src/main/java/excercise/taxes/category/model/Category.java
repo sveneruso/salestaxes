@@ -1,8 +1,5 @@
 package excercise.taxes.category.model;
 
-/**
- * @author sveneruso
- */
 public class Category {
 
     private String code;

@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author sveneruso
- */
 public class SalesTaxes {
 
     private BigDecimal localSalesTax;

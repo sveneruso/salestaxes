@@ -3,9 +3,6 @@ package excercise.taxes.sales.repository;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * @author sveneruso
- */
 public interface SalesTaxesRepository {
 
     BigDecimal getLocalSalesTaxes();

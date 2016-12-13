@@ -1,8 +1,5 @@
 package excercise.taxes.product.model;
 
-/**
- * @author sveneruso
- */
 public class Product {
 
     private String code;

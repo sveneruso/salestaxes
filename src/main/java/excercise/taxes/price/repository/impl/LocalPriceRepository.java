@@ -27,11 +27,13 @@ public class LocalPriceRepository implements PriceRepository {
         }
     };
 
-    private Map<String, Price> priceList = new HashMap<String, Price>() {{
-        for (Price price : priceItems) {
-            put(price.getProductCode(), price);
+    private Map<String, Price> priceList = new HashMap<String, Price>() {
+        {
+            for (Price price : priceItems) {
+                put(price.getProductCode(), price);
+            }
         }
-    }};
+    };
 
     @Override
     public Price getProductPrice(String productCode) {
